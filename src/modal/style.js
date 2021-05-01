@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'red',
     height: '60%',
     width: '100%',
-    marginTop: '30%',
+    marginTop: '15%',
   },
   stretch: {
     width: '70%',
@@ -24,24 +24,22 @@ const styles = StyleSheet.create({
   },
 
   imgNext: {
-    // backgroundColor: 'red',
     height: '80%',
     width: 50,
     marginTop: '80%',
   },
-
+  imgCrop: {
+    height: 30,
+    width: 30,
+    marginTop: '7%',
+    marginLeft: '90%',
+  },
   imgRotate: {
-    // backgroundColor: 'red',
     height: '70%',
     width: 50,
     marginTop: '80%',
   },
-  //   imgRotate: {
-  //     // backgroundColor: 'red',
-  //     height: '10%',
-  //     width: '10%',
-  //     marginTop: '30%',
-  //   },
+
   centeredView: {
     flex: 1,
     justifyContent: 'center',
@@ -74,12 +72,12 @@ const styles = StyleSheet.create({
   buttonClose: {
     backgroundColor: '#2196F3',
   },
-  // textStyle: {
-  //   color: 'black',
-  //   fontWeight: 'bold',
-  //   // textAlign: 'center',
-  //   fontSize: 15,
-  // },
+  textStyle: {
+    color: 'black',
+    fontWeight: 'bold',
+    // textAlign: 'center',
+    fontSize: 17,
+  },
   modalText: {
     marginBottom: 15,
     textAlign: 'center',

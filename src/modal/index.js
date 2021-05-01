@@ -45,7 +45,22 @@ const ModalDemo = () => {
           </View>
         </View>
       </Modal>
-
+      <View
+        style={{
+          height: '10%',
+          width: '100%',
+          backgroundColor: 'green',
+          flexDirection: 'row',
+          // justifyContent: 'space-between',
+          // padding: 15,
+        }}>
+        <TouchableOpacity onPress={() => alert('Crop ?')}>
+          <Image
+            style={styles.imgCrop}
+            source={require('../constant/images/crop.png')}
+          />
+        </TouchableOpacity>
+      </View>
       <View style={styles.imgView}>
         <Image
           style={styles.stretch}
@@ -61,7 +76,7 @@ const ModalDemo = () => {
           justifyContent: 'space-between',
           padding: 15,
         }}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => alert('Rotate ?')}>
           <Image
             style={styles.imgNext}
             source={require('../constant/images/rotate.png')}
@@ -80,7 +95,7 @@ const ModalDemo = () => {
             }}></View>
         </TouchableOpacity>
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => alert('Next ?')}>
           <Image
             style={styles.imgRotate}
             source={require('../constant/images/next.png')}
