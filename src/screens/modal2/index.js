@@ -3,53 +3,105 @@ import {
   SafeAreaView,
   Image,
   Text,
-  Pressable,
   View,
   Modal,
   TouchableOpacity,
 } from 'react-native';
 import styles from './style';
+import {useNavigation} from '@react-navigation/native';
 
-const ModalDemo2 = () => {
-  const [modalVisible, setModalVisible] = useState(false);
+const ModalDemo1 = () => {
+  const [modalVisible2, setModalVisible2] = useState(false);
+  const navigation = useNavigation();
 
   return (
     <SafeAreaView style={styles.container}>
       <Modal
         animationType="slide"
         transparent={true}
-        visible={modalVisible}
+        visible={modalVisible2}
         onRequestClose={() => {
           Alert.alert('Modal has been closed.');
-          setModalVisible(!modalVisible);
+          setModalVisible2(!modalVisible2);
         }}>
         <View style={styles.centeredView}>
-          <View style={styles.modalView}>
-            <Text style={styles.modalText}>Next, recored your answer</Text>
-            <Text style={styles.modalText2}>
-              Tap record when ready. Don't stress about reharrasing, genuine
-              answer work best.
-            </Text>
+          <View style={styles.modalViewNext}>
+            <View style={{width: '150%', height: 30}}>
+              <Text style={styles.modalTextNext}>
+                Next, recored your answer
+              </Text>
+            </View>
+            <View
+              style={{
+                // backgroundColor: 'grey',
+                width: '160%',
+                height: 70,
+                top: 10,
+              }}>
+              <Text style={styles.modalText2Next}>
+                Tap record when ready. Don't stress about reharrasing, genuine
+                answer work best.
+              </Text>
+            </View>
 
-            <TouchableOpacity onPress={() => setModalVisible(!modalVisible)}>
+            <View style={{flexDirection: 'row'}}>
               <View
                 style={{
-                  width: 70,
-                  height: 30,
-                  // backgroundColor: 'pink',
-                  marginLeft: '80%',
+                  width: 12,
+                  height: 12,
+                  borderRadius: 10,
+                  margin: 5,
+                  backgroundColor: 'grey',
+                }}
+              />
+              <View
+                style={{
+                  width: 20,
+                  height: 12,
+                  borderRadius: 10,
+                  margin: 5,
+                  backgroundColor: 'blue',
+                }}
+              />
+
+              <View
+                style={{
+                  width: 12,
+                  height: 12,
+                  margin: 5,
+                  borderRadius: 10,
+                  backgroundColor: 'grey',
+                }}
+              />
+
+              <TouchableOpacity
+                onPress={() => {
+                  setModalVisible2(false);
                 }}>
-                <Text style={styles.textStyle}> Skip >> </Text>
-              </View>
-            </TouchableOpacity>
+                <View
+                  style={{
+                    width: 70,
+                    height: 30,
+                    // backgroundColor: 'pink',
+                    marginLeft: '74%',
+                  }}>
+                  <Text style={styles.textStyleNext}> Skip >> </Text>
+                </View>
+              </TouchableOpacity>
+            </View>
           </View>
+          <Image
+            style={styles.imgSelect2}
+            source={require('../../constant/images/tap.png')}
+          />
         </View>
       </Modal>
+
       <View
         style={{
           height: '10%',
           width: '100%',
-          backgroundColor: 'green',
+          // backgroundColor: 'green',
           flexDirection: 'row',
           // justifyContent: 'space-between',
           // padding: 15,
@@ -70,11 +122,14 @@ const ModalDemo2 = () => {
       <View
         style={{
           height: '15%',
-          width: '100%',
-          backgroundColor: 'pink',
+          width: '90%',
+          // backgroundColor: 'pink',
+          bottom: 45,
+          // top: 10,
           flexDirection: 'row',
           justifyContent: 'space-between',
           padding: 15,
+          marginLeft: 30,
         }}>
         <TouchableOpacity onPress={() => alert('Rotate ?')}>
           <Image
@@ -83,14 +138,30 @@ const ModalDemo2 = () => {
           />
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => setModalVisible(true)}>
-          <Image
-            style={styles.imgRecord}
-            source={require('../../constant/images/record.png')}
-          />
+        <TouchableOpacity onPress={() => setModalVisible2(true)}>
+          <View
+            style={{
+              height: 65,
+              width: 65,
+              // backgroundColor: 'red',
+              borderColor: 'black',
+              borderWidth: 4,
+              borderRadius: 40,
+              top: 25,
+              left: 2,
+              borderStyle: 'dotted',
+            }}>
+            <Image
+              style={styles.imgRecord}
+              source={require('../../constant/images/record.png')}
+            />
+          </View>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => alert('Next ?')}>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate('ModalDemo3');
+          }}>
           <Image
             style={styles.imgRotate}
             source={require('../../constant/images/next.png')}
@@ -101,4 +172,4 @@ const ModalDemo2 = () => {
   );
 };
 
-export default ModalDemo2;
+export default ModalDemo1;
