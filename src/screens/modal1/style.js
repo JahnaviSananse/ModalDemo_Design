@@ -39,6 +39,11 @@ const styles = StyleSheet.create({
     width: 50,
     marginTop: '80%',
   },
+  imgRecord: {
+    height: 70,
+    width: 70,
+    marginTop: '35%',
+  },
 
   centeredView: {
     flex: 1,
@@ -61,6 +66,21 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     elevation: 5,
   },
+  modalView2: {
+    margin: 10,
+    backgroundColor: 'white',
+    borderRadius: 20,
+    padding: 15,
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5,
+  },
   button: {
     borderRadius: 20,
     padding: 10,
@@ -73,7 +93,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#2196F3',
   },
   textStyle: {
-    color: 'black',
+    color: 'red',
     fontWeight: 'bold',
     // textAlign: 'center',
     fontSize: 17,
@@ -81,13 +101,14 @@ const styles = StyleSheet.create({
   modalText: {
     marginBottom: 15,
     textAlign: 'center',
-    color: 'purple',
+    color: 'blue',
     fontWeight: 'bold',
-    fontSize: 25,
+    fontSize: 24,
   },
   modalText2: {
     marginBottom: 15,
     textAlign: 'center',
+    color: 'blue',
   },
 });
 

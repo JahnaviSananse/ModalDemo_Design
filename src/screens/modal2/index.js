@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import styles from './style';
 
-const ModalDemo = () => {
+const ModalDemo2 = () => {
   const [modalVisible, setModalVisible] = useState(false);
 
   return (
@@ -57,14 +57,14 @@ const ModalDemo = () => {
         <TouchableOpacity onPress={() => alert('Crop ?')}>
           <Image
             style={styles.imgCrop}
-            source={require('../constant/images/crop.png')}
+            source={require('../../constant/images/crop.png')}
           />
         </TouchableOpacity>
       </View>
       <View style={styles.imgView}>
         <Image
           style={styles.stretch}
-          source={require('../constant/images/lady.jpg')}
+          source={require('../../constant/images/lady.jpg')}
         />
       </View>
       <View
@@ -79,26 +79,21 @@ const ModalDemo = () => {
         <TouchableOpacity onPress={() => alert('Rotate ?')}>
           <Image
             style={styles.imgNext}
-            source={require('../constant/images/rotate.png')}
+            source={require('../../constant/images/rotate.png')}
           />
         </TouchableOpacity>
 
         <TouchableOpacity onPress={() => setModalVisible(true)}>
-          <View
-            style={{
-              height: 80,
-              width: 80,
-              backgroundColor: 'black',
-              borderRadius: 45,
-              borderWidth: 3,
-              marginTop: '30%',
-            }}></View>
+          <Image
+            style={styles.imgRecord}
+            source={require('../../constant/images/record.png')}
+          />
         </TouchableOpacity>
 
         <TouchableOpacity onPress={() => alert('Next ?')}>
           <Image
             style={styles.imgRotate}
-            source={require('../constant/images/next.png')}
+            source={require('../../constant/images/next.png')}
           />
         </TouchableOpacity>
       </View>
@@ -106,4 +101,4 @@ const ModalDemo = () => {
   );
 };
 
-export default ModalDemo;
+export default ModalDemo2;
