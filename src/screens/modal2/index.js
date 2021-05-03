@@ -39,7 +39,7 @@ const ModalDemo2 = () => {
                   // backgroundColor: 'pink',
                   marginLeft: '80%',
                 }}>
-                <Text style={styles.textStyle}> Skip >>> </Text>
+                <Text style={styles.textStyle}> Skip >> </Text>
               </View>
             </TouchableOpacity>
           </View>
